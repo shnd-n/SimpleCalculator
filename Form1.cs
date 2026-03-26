@@ -88,6 +88,7 @@ namespace SimpleCalculator
 
             oper.Text += resultNum.ToString();
             result.Text = resultNum.ToString();
+            operLog.Items.Add(oper.Text);
 
         }
 

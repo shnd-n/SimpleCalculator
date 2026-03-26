@@ -51,6 +51,7 @@
             btnCe = new Button();
             btnPM = new Button();
             btnDot = new Button();
+            operLog = new ListBox();
             SuspendLayout();
             // 
             // label1
@@ -312,11 +313,21 @@
             btnDot.Text = ".";
             btnDot.UseVisualStyleBackColor = true;
             // 
+            // operLog
+            // 
+            operLog.Font = new Font("맑은 고딕", 12F, FontStyle.Regular, GraphicsUnit.Point, 129);
+            operLog.FormattingEnabled = true;
+            operLog.Location = new Point(551, 225);
+            operLog.Name = "operLog";
+            operLog.Size = new Size(207, 130);
+            operLog.TabIndex = 24;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(770, 522);
+            Controls.Add(operLog);
             Controls.Add(btnDot);
             Controls.Add(btnPM);
             Controls.Add(btnCe);
@@ -372,5 +383,6 @@
         private Button btnCe;
         private Button btnPM;
         private Button btnDot;
+        private ListBox operLog;
     }
 }
