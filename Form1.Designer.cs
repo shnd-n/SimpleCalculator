@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             label1 = new Label();
             oper = new TextBox();
             result = new TextBox();
@@ -59,6 +60,7 @@
             // label1
             // 
             label1.AutoSize = true;
+            label1.BackColor = Color.Transparent;
             label1.Font = new Font("맑은 고딕", 48F, FontStyle.Bold, GraphicsUnit.Point, 129);
             label1.ForeColor = Color.FromArgb(128, 128, 255);
             label1.Location = new Point(94, 9);
@@ -85,6 +87,9 @@
             // 
             // numSeven
             // 
+            numSeven.BackColor = Color.Transparent;
+            numSeven.BackgroundImage = (Image)resources.GetObject("numSeven.BackgroundImage");
+            numSeven.BackgroundImageLayout = ImageLayout.Stretch;
             numSeven.Font = new Font("맑은 고딕", 14.25F, FontStyle.Bold);
             numSeven.ForeColor = Color.Blue;
             numSeven.Location = new Point(94, 287);
@@ -92,11 +97,14 @@
             numSeven.Size = new Size(90, 41);
             numSeven.TabIndex = 3;
             numSeven.Text = "7";
-            numSeven.UseVisualStyleBackColor = true;
+            numSeven.UseVisualStyleBackColor = false;
             numSeven.Click += numBtn_Click;
             // 
             // numEight
             // 
+            numEight.BackColor = Color.Transparent;
+            numEight.BackgroundImage = (Image)resources.GetObject("numEight.BackgroundImage");
+            numEight.BackgroundImageLayout = ImageLayout.Stretch;
             numEight.Font = new Font("맑은 고딕", 14.25F, FontStyle.Bold);
             numEight.ForeColor = Color.Blue;
             numEight.Location = new Point(201, 287);
@@ -104,11 +112,14 @@
             numEight.Size = new Size(90, 41);
             numEight.TabIndex = 4;
             numEight.Text = "8";
-            numEight.UseVisualStyleBackColor = true;
+            numEight.UseVisualStyleBackColor = false;
             numEight.Click += numBtn_Click;
             // 
             // numNine
             // 
+            numNine.BackColor = Color.Transparent;
+            numNine.BackgroundImage = (Image)resources.GetObject("numNine.BackgroundImage");
+            numNine.BackgroundImageLayout = ImageLayout.Stretch;
             numNine.Font = new Font("맑은 고딕", 14.25F, FontStyle.Bold);
             numNine.ForeColor = Color.Blue;
             numNine.Location = new Point(309, 287);
@@ -116,11 +127,14 @@
             numNine.Size = new Size(90, 41);
             numNine.TabIndex = 5;
             numNine.Text = "9";
-            numNine.UseVisualStyleBackColor = true;
+            numNine.UseVisualStyleBackColor = false;
             numNine.Click += numBtn_Click;
             // 
             // numFour
             // 
+            numFour.BackColor = Color.Transparent;
+            numFour.BackgroundImage = (Image)resources.GetObject("numFour.BackgroundImage");
+            numFour.BackgroundImageLayout = ImageLayout.Stretch;
             numFour.Font = new Font("맑은 고딕", 14.25F, FontStyle.Bold);
             numFour.ForeColor = Color.Blue;
             numFour.Location = new Point(94, 351);
@@ -128,11 +142,14 @@
             numFour.Size = new Size(90, 41);
             numFour.TabIndex = 6;
             numFour.Text = "4";
-            numFour.UseVisualStyleBackColor = true;
+            numFour.UseVisualStyleBackColor = false;
             numFour.Click += numBtn_Click;
             // 
             // numFive
             // 
+            numFive.BackColor = Color.Transparent;
+            numFive.BackgroundImage = (Image)resources.GetObject("numFive.BackgroundImage");
+            numFive.BackgroundImageLayout = ImageLayout.Stretch;
             numFive.Font = new Font("맑은 고딕", 14.25F, FontStyle.Bold);
             numFive.ForeColor = Color.Blue;
             numFive.Location = new Point(201, 351);
@@ -140,11 +157,14 @@
             numFive.Size = new Size(90, 41);
             numFive.TabIndex = 7;
             numFive.Text = "5";
-            numFive.UseVisualStyleBackColor = true;
+            numFive.UseVisualStyleBackColor = false;
             numFive.Click += numBtn_Click;
             // 
             // numSix
             // 
+            numSix.BackColor = Color.Transparent;
+            numSix.BackgroundImage = (Image)resources.GetObject("numSix.BackgroundImage");
+            numSix.BackgroundImageLayout = ImageLayout.Stretch;
             numSix.Font = new Font("맑은 고딕", 14.25F, FontStyle.Bold);
             numSix.ForeColor = Color.Blue;
             numSix.Location = new Point(309, 351);
@@ -152,11 +172,14 @@
             numSix.Size = new Size(90, 41);
             numSix.TabIndex = 8;
             numSix.Text = "6";
-            numSix.UseVisualStyleBackColor = true;
+            numSix.UseVisualStyleBackColor = false;
             numSix.Click += numBtn_Click;
             // 
             // numOne
             // 
+            numOne.BackColor = Color.Transparent;
+            numOne.BackgroundImage = (Image)resources.GetObject("numOne.BackgroundImage");
+            numOne.BackgroundImageLayout = ImageLayout.Stretch;
             numOne.Font = new Font("맑은 고딕", 14.25F, FontStyle.Bold);
             numOne.ForeColor = Color.Blue;
             numOne.Location = new Point(94, 411);
@@ -164,11 +187,14 @@
             numOne.Size = new Size(90, 41);
             numOne.TabIndex = 9;
             numOne.Text = "1";
-            numOne.UseVisualStyleBackColor = true;
+            numOne.UseVisualStyleBackColor = false;
             numOne.Click += numBtn_Click;
             // 
             // numTwo
             // 
+            numTwo.BackColor = Color.Transparent;
+            numTwo.BackgroundImage = (Image)resources.GetObject("numTwo.BackgroundImage");
+            numTwo.BackgroundImageLayout = ImageLayout.Stretch;
             numTwo.Font = new Font("맑은 고딕", 14.25F, FontStyle.Bold);
             numTwo.ForeColor = Color.Blue;
             numTwo.Location = new Point(201, 411);
@@ -176,11 +202,14 @@
             numTwo.Size = new Size(90, 41);
             numTwo.TabIndex = 10;
             numTwo.Text = "2";
-            numTwo.UseVisualStyleBackColor = true;
+            numTwo.UseVisualStyleBackColor = false;
             numTwo.Click += numBtn_Click;
             // 
             // numThree
             // 
+            numThree.BackColor = Color.Transparent;
+            numThree.BackgroundImage = (Image)resources.GetObject("numThree.BackgroundImage");
+            numThree.BackgroundImageLayout = ImageLayout.Stretch;
             numThree.Font = new Font("맑은 고딕", 14.25F, FontStyle.Bold);
             numThree.ForeColor = Color.Blue;
             numThree.Location = new Point(309, 411);
@@ -188,22 +217,26 @@
             numThree.Size = new Size(90, 41);
             numThree.TabIndex = 11;
             numThree.Text = "3";
-            numThree.UseVisualStyleBackColor = true;
+            numThree.UseVisualStyleBackColor = false;
             numThree.Click += numBtn_Click;
             // 
             // equl
             // 
+            equl.BackColor = Color.Transparent;
+            equl.FlatStyle = FlatStyle.System;
             equl.Font = new Font("맑은 고딕", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 129);
             equl.Location = new Point(430, 469);
             equl.Name = "equl";
             equl.Size = new Size(90, 41);
             equl.TabIndex = 13;
             equl.Text = "=";
-            equl.UseVisualStyleBackColor = true;
+            equl.UseVisualStyleBackColor = false;
             equl.Click += equl_Click;
             // 
             // plus
             // 
+            plus.BackColor = Color.Transparent;
+            plus.FlatStyle = FlatStyle.System;
             plus.Font = new Font("맑은 고딕", 14.25F, FontStyle.Bold);
             plus.ForeColor = Color.FromArgb(255, 128, 128);
             plus.Location = new Point(430, 411);
@@ -211,11 +244,14 @@
             plus.Size = new Size(90, 41);
             plus.TabIndex = 14;
             plus.Text = "+";
-            plus.UseVisualStyleBackColor = true;
+            plus.UseVisualStyleBackColor = false;
             plus.Click += operBtn_Click;
             // 
             // numZero
             // 
+            numZero.BackColor = Color.Transparent;
+            numZero.BackgroundImage = (Image)resources.GetObject("numZero.BackgroundImage");
+            numZero.BackgroundImageLayout = ImageLayout.Stretch;
             numZero.Font = new Font("맑은 고딕", 14.25F, FontStyle.Bold);
             numZero.ForeColor = Color.Blue;
             numZero.Location = new Point(201, 469);
@@ -223,11 +259,13 @@
             numZero.Size = new Size(90, 41);
             numZero.TabIndex = 15;
             numZero.Text = "0";
-            numZero.UseVisualStyleBackColor = true;
+            numZero.UseVisualStyleBackColor = false;
             numZero.Click += numBtn_Click;
             // 
             // operMultiply
             // 
+            operMultiply.BackColor = Color.Transparent;
+            operMultiply.FlatStyle = FlatStyle.System;
             operMultiply.Font = new Font("맑은 고딕", 14.25F, FontStyle.Bold);
             operMultiply.ForeColor = Color.FromArgb(255, 128, 128);
             operMultiply.Location = new Point(430, 287);
@@ -235,11 +273,13 @@
             operMultiply.Size = new Size(90, 41);
             operMultiply.TabIndex = 16;
             operMultiply.Text = "X";
-            operMultiply.UseVisualStyleBackColor = true;
+            operMultiply.UseVisualStyleBackColor = false;
             operMultiply.Click += operBtn_Click;
             // 
             // operMinus
             // 
+            operMinus.BackColor = Color.Transparent;
+            operMinus.FlatStyle = FlatStyle.System;
             operMinus.Font = new Font("맑은 고딕", 14.25F, FontStyle.Bold);
             operMinus.ForeColor = Color.FromArgb(255, 128, 128);
             operMinus.Location = new Point(430, 351);
@@ -247,11 +287,13 @@
             operMinus.Size = new Size(90, 41);
             operMinus.TabIndex = 17;
             operMinus.Text = "-";
-            operMinus.UseVisualStyleBackColor = true;
+            operMinus.UseVisualStyleBackColor = false;
             operMinus.Click += operBtn_Click;
             // 
             // operDivide
             // 
+            operDivide.BackColor = Color.Transparent;
+            operDivide.FlatStyle = FlatStyle.System;
             operDivide.Font = new Font("맑은 고딕", 14.25F, FontStyle.Bold);
             operDivide.ForeColor = Color.FromArgb(255, 128, 128);
             operDivide.Location = new Point(430, 225);
@@ -259,62 +301,74 @@
             operDivide.Size = new Size(90, 41);
             operDivide.TabIndex = 18;
             operDivide.Text = "÷";
-            operDivide.UseVisualStyleBackColor = true;
+            operDivide.UseVisualStyleBackColor = false;
             operDivide.Click += operBtn_Click;
             // 
             // btnDelete
             // 
+            btnDelete.BackColor = Color.Transparent;
+            btnDelete.FlatStyle = FlatStyle.System;
             btnDelete.Font = new Font("맑은 고딕", 14.25F, FontStyle.Bold);
             btnDelete.Location = new Point(309, 225);
             btnDelete.Name = "btnDelete";
             btnDelete.Size = new Size(90, 41);
             btnDelete.TabIndex = 19;
             btnDelete.Text = "del";
-            btnDelete.UseVisualStyleBackColor = true;
+            btnDelete.UseVisualStyleBackColor = false;
             btnDelete.Click += btnDelete_Click;
             // 
             // btnC
             // 
+            btnC.BackColor = Color.Transparent;
+            btnC.FlatStyle = FlatStyle.System;
             btnC.Font = new Font("맑은 고딕", 14.25F, FontStyle.Bold);
             btnC.Location = new Point(201, 225);
             btnC.Name = "btnC";
             btnC.Size = new Size(90, 41);
             btnC.TabIndex = 20;
             btnC.Text = "C";
-            btnC.UseVisualStyleBackColor = true;
+            btnC.UseVisualStyleBackColor = false;
             btnC.Click += btnC_Click;
             // 
             // btnCe
             // 
+            btnCe.BackColor = Color.Transparent;
+            btnCe.BackgroundImageLayout = ImageLayout.Stretch;
+            btnCe.FlatStyle = FlatStyle.System;
             btnCe.Font = new Font("맑은 고딕", 14.25F, FontStyle.Bold);
+            btnCe.ForeColor = SystemColors.ControlText;
             btnCe.Location = new Point(94, 225);
             btnCe.Name = "btnCe";
             btnCe.Size = new Size(90, 41);
             btnCe.TabIndex = 21;
             btnCe.Text = "CE";
-            btnCe.UseVisualStyleBackColor = true;
+            btnCe.UseVisualStyleBackColor = false;
             btnCe.Click += btnCe_Click;
             // 
             // btnPM
             // 
+            btnPM.BackColor = Color.Transparent;
+            btnPM.FlatStyle = FlatStyle.System;
             btnPM.Font = new Font("맑은 고딕", 14.25F, FontStyle.Bold);
             btnPM.Location = new Point(94, 469);
             btnPM.Name = "btnPM";
             btnPM.Size = new Size(90, 41);
             btnPM.TabIndex = 22;
             btnPM.Text = "+/-";
-            btnPM.UseVisualStyleBackColor = true;
+            btnPM.UseVisualStyleBackColor = false;
             btnPM.Click += btnPM_Click;
             // 
             // btnDot
             // 
+            btnDot.BackColor = Color.Transparent;
+            btnDot.FlatStyle = FlatStyle.System;
             btnDot.Font = new Font("맑은 고딕", 14.25F, FontStyle.Bold);
             btnDot.Location = new Point(309, 469);
             btnDot.Name = "btnDot";
             btnDot.Size = new Size(90, 41);
             btnDot.TabIndex = 23;
             btnDot.Text = ".";
-            btnDot.UseVisualStyleBackColor = true;
+            btnDot.UseVisualStyleBackColor = false;
             btnDot.Click += btnDot_Click;
             // 
             // operLog
@@ -340,20 +394,24 @@
             // 
             // sqr
             // 
+            sqr.BackColor = Color.Transparent;
+            sqr.FlatStyle = FlatStyle.System;
             sqr.Font = new Font("맑은 고딕", 14.25F, FontStyle.Bold);
             sqr.Location = new Point(12, 287);
             sqr.Name = "sqr";
             sqr.Size = new Size(76, 41);
             sqr.TabIndex = 26;
             sqr.Text = "x^2";
-            sqr.UseVisualStyleBackColor = true;
+            sqr.UseVisualStyleBackColor = false;
             sqr.Click += sqr_Click;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(770, 522);
+            BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
+            BackgroundImageLayout = ImageLayout.Stretch;
+            ClientSize = new Size(770, 638);
             Controls.Add(sqr);
             Controls.Add(deleteLog);
             Controls.Add(operLog);
