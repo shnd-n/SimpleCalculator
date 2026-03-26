@@ -29,34 +29,31 @@ namespace SimpleCalculator
             string operText = btn.Text;
 
             oper.Text += operText;
-            operation = operText;
-
             result.Text = "";
 
-            switch (operation)
+
+            if (firstNum != "")
             {
-                case "+":
-                    resultNum += int.Parse(firstNum);
-                    break;
-                case "-":
-                    resultNum -= int.Parse(firstNum);
-                    break;
-                case "*":
-                    resultNum *= int.Parse(firstNum);
-                    break;
-                case "/":
-                    if (int.Parse(firstNum) != 0)
+                if (operation == "")
+                {
+                    resultNum = int.Parse(firstNum);
+                }
+                else
+                {
+                    switch (operation)
                     {
-                        resultNum /= int.Parse(firstNum);
+                        case "+": resultNum += int.Parse(firstNum); break;
+                        case "-": resultNum -= int.Parse(firstNum); break;
+                        case "*": resultNum *= int.Parse(firstNum); break;
+                        case "/":
+                            int temp = int.Parse(firstNum);
+                            if (temp != 0) resultNum /= temp;
+                            break;
                     }
-                    else
-                    {
-                        MessageBox.Show("Cannot divide by zero.");
-                        resultNum = 0;
-                    }
-                    break;
+                }
             }
 
+            operation = operText;
             firstNum = "";                 
                         
 
