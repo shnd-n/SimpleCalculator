@@ -234,7 +234,7 @@
             operMultiply.Name = "operMultiply";
             operMultiply.Size = new Size(90, 41);
             operMultiply.TabIndex = 16;
-            operMultiply.Text = "*";
+            operMultiply.Text = "X";
             operMultiply.UseVisualStyleBackColor = true;
             operMultiply.Click += operBtn_Click;
             // 
@@ -258,7 +258,7 @@
             operDivide.Name = "operDivide";
             operDivide.Size = new Size(90, 41);
             operDivide.TabIndex = 18;
-            operDivide.Text = "/";
+            operDivide.Text = "÷";
             operDivide.UseVisualStyleBackColor = true;
             operDivide.Click += operBtn_Click;
             // 

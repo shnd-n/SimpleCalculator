@@ -48,7 +48,7 @@ namespace SimpleCalculator
                         case "+": resultNum += double.Parse(firstNum); break;
                         case "-": resultNum -= double.Parse(firstNum); break;
                         case "*": resultNum *= double.Parse(firstNum); break;
-                        case "/":
+                        case "÷":
                             double temp = double.Parse(firstNum);
                             if (temp != 0) resultNum /= temp;
                             else MessageBox.Show("0으로 나눌 수 없습니다.");
@@ -77,7 +77,7 @@ namespace SimpleCalculator
                 case "-":
                     resultNum -= double.Parse(firstNum);
                     break;
-                case "*":
+                case "X":
                     resultNum *= double.Parse(firstNum);
                     break;
                 case "/":
@@ -117,9 +117,12 @@ namespace SimpleCalculator
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            oper.Text = oper.Text.Substring(0, oper.Text.Length - 1);
-            firstNum = firstNum.Substring(0, firstNum.Length - 1);
-            result.Text = result.Text.Substring(0, result.Text.Length - 1);
+            if(firstNum.Length > 0)
+            {
+                oper.Text = oper.Text.Substring(0, oper.Text.Length - 1);
+                firstNum = firstNum.Substring(0, firstNum.Length - 1);
+                result.Text = result.Text.Substring(0, result.Text.Length - 1);
+            }            
         }
 
         private void deleteLog_Click(object sender, EventArgs e)
