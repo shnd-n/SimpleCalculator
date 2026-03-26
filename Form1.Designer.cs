@@ -52,6 +52,8 @@
             btnPM = new Button();
             btnDot = new Button();
             operLog = new ListBox();
+            deleteLog = new Button();
+            sqr = new Button();
             SuspendLayout();
             // 
             // label1
@@ -302,6 +304,7 @@
             btnPM.TabIndex = 22;
             btnPM.Text = "+/-";
             btnPM.UseVisualStyleBackColor = true;
+            btnPM.Click += btnPM_Click;
             // 
             // btnDot
             // 
@@ -312,6 +315,7 @@
             btnDot.TabIndex = 23;
             btnDot.Text = ".";
             btnDot.UseVisualStyleBackColor = true;
+            btnDot.Click += btnDot_Click;
             // 
             // operLog
             // 
@@ -322,11 +326,36 @@
             operLog.Size = new Size(207, 130);
             operLog.TabIndex = 24;
             // 
+            // deleteLog
+            // 
+            deleteLog.Font = new Font("맑은 고딕", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 129);
+            deleteLog.ForeColor = Color.Red;
+            deleteLog.Location = new Point(683, 369);
+            deleteLog.Name = "deleteLog";
+            deleteLog.Size = new Size(75, 23);
+            deleteLog.TabIndex = 25;
+            deleteLog.Text = "삭제";
+            deleteLog.UseVisualStyleBackColor = true;
+            deleteLog.Click += deleteLog_Click;
+            // 
+            // sqr
+            // 
+            sqr.Font = new Font("맑은 고딕", 14.25F, FontStyle.Bold);
+            sqr.Location = new Point(12, 287);
+            sqr.Name = "sqr";
+            sqr.Size = new Size(76, 41);
+            sqr.TabIndex = 26;
+            sqr.Text = "x^2";
+            sqr.UseVisualStyleBackColor = true;
+            sqr.Click += sqr_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(770, 522);
+            Controls.Add(sqr);
+            Controls.Add(deleteLog);
             Controls.Add(operLog);
             Controls.Add(btnDot);
             Controls.Add(btnPM);
@@ -384,5 +413,7 @@
         private Button btnPM;
         private Button btnDot;
         private ListBox operLog;
+        private Button deleteLog;
+        private Button sqr;
     }
 }

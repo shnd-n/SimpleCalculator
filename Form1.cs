@@ -2,9 +2,10 @@ namespace SimpleCalculator
 {
     public partial class Form1 : Form
     {
-        int resultNum = 0;
+        double resultNum = 0;
         string firstNum = "";
         string operation = "";
+        bool plusMinus = false;
         public Form1()
         {
             InitializeComponent();
@@ -27,32 +28,38 @@ namespace SimpleCalculator
             Button btn = (Button)sender;
             string operText = btn.Text;
 
-            oper.Text += operText;
-            result.Text = "";
-
+            if (firstNum == "" && operation != "")
+            {
+                oper.Text = oper.Text.Remove(oper.Text.Length - 1) + operText;
+                operation = operText;
+                return;
+            }
 
             if (firstNum != "")
             {
                 if (operation == "")
                 {
-                    resultNum = int.Parse(firstNum);
+                    resultNum = double.Parse(firstNum);
                 }
                 else
                 {
                     switch (operation)
                     {
-                        case "+": resultNum += int.Parse(firstNum); break;
-                        case "-": resultNum -= int.Parse(firstNum); break;
-                        case "*": resultNum *= int.Parse(firstNum); break;
+                        case "+": resultNum += double.Parse(firstNum); break;
+                        case "-": resultNum -= double.Parse(firstNum); break;
+                        case "*": resultNum *= double.Parse(firstNum); break;
                         case "/":
-                            int temp = int.Parse(firstNum);
+                            double temp = double.Parse(firstNum);
                             if (temp != 0) resultNum /= temp;
+                            else MessageBox.Show("0으로 나눌 수 없습니다.");
                             break;
                     }
                 }
             }
 
             operation = operText;
+            oper.Text += operText;
+            result.Text = "";
             firstNum = "";
 
 
@@ -65,22 +72,22 @@ namespace SimpleCalculator
             switch (operation)
             {
                 case "+":
-                    resultNum += int.Parse(firstNum);
+                    resultNum += double.Parse(firstNum);
                     break;
                 case "-":
-                    resultNum -= int.Parse(firstNum);
+                    resultNum -= double.Parse(firstNum);
                     break;
                 case "*":
-                    resultNum *= int.Parse(firstNum);
+                    resultNum *= double.Parse(firstNum);
                     break;
                 case "/":
-                    if (int.Parse(firstNum) != 0)
+                    if (double.Parse(firstNum) != 0)
                     {
-                        resultNum /= int.Parse(firstNum);
+                        resultNum /= double.Parse(firstNum);
                     }
                     else
                     {
-                        MessageBox.Show("Cannot divide by zero.");
+                        MessageBox.Show("0으로 나눌 수 없습니다.");
                         resultNum = 0;
                     }
                     break;
@@ -113,6 +120,69 @@ namespace SimpleCalculator
             oper.Text = oper.Text.Substring(0, oper.Text.Length - 1);
             firstNum = firstNum.Substring(0, firstNum.Length - 1);
             result.Text = result.Text.Substring(0, result.Text.Length - 1);
+        }
+
+        private void deleteLog_Click(object sender, EventArgs e)
+        {
+            if (operLog.SelectedIndex != -1)
+            {
+                operLog.Items.RemoveAt(operLog.SelectedIndex);
+            }
+        }
+
+        private void btnDot_Click(object sender, EventArgs e)
+        {
+            if (!firstNum.Contains("."))
+            {
+                if (firstNum == "")
+                {
+                    firstNum = "0.";
+                    result.Text = "0.";
+                    oper.Text += "0.";
+                }
+                else
+                {
+                    firstNum += ".";
+                    result.Text += ".";
+                    oper.Text += ".";
+                }
+            }
+        }
+
+        private void btnPM_Click(object sender, EventArgs e)
+        {
+            if (plusMinus)
+            {
+                firstNum = firstNum.Substring(1);
+                result.Text = result.Text.Substring(1);
+                oper.Text = oper.Text.Substring(0, oper.Text.Length - firstNum.Length - 1) + firstNum;
+                plusMinus = false;
+
+            }
+            else
+            {
+                firstNum = "-" + firstNum;
+                result.Text = "-" + result.Text;
+                oper.Text = oper.Text.Substring(0, oper.Text.Length - firstNum.Length + 1) + firstNum;
+                plusMinus = true;
+            }
+        }
+
+        private void sqr_Click(object sender, EventArgs e)
+        {
+            if (!string.IsNullOrEmpty(firstNum))
+            {
+                double temp = double.Parse(firstNum);
+                double squared = temp * temp;
+
+                int removeLen = firstNum.Length;
+                oper.Text = oper.Text.Substring(0, oper.Text.Length - removeLen);
+
+                oper.Text += $"sqr({firstNum})";
+
+                firstNum = squared.ToString("G");
+                result.Text = firstNum;
+            }
         }
     }
 }
