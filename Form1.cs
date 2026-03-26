@@ -99,5 +99,19 @@ namespace SimpleCalculator
             oper.Text = "";
             result.Text = "";
         }
+
+        private void btnCe_Click(object sender, EventArgs e)
+        {
+            oper.Text = oper.Text.Substring(0, oper.Text.Length - firstNum.Length);
+            firstNum = "";
+            result.Text = "";
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            oper.Text = oper.Text.Substring(0, oper.Text.Length - 1);
+            firstNum = firstNum.Substring(0, firstNum.Length - 1);
+            result.Text = result.Text.Substring(0, result.Text.Length - 1);
+        }
     }
 }

@@ -268,6 +268,7 @@
             btnDelete.TabIndex = 19;
             btnDelete.Text = "del";
             btnDelete.UseVisualStyleBackColor = true;
+            btnDelete.Click += btnDelete_Click;
             // 
             // btnC
             // 
@@ -289,6 +290,7 @@
             btnCe.TabIndex = 21;
             btnCe.Text = "CE";
             btnCe.UseVisualStyleBackColor = true;
+            btnCe.Click += btnCe_Click;
             // 
             // btnPM
             // 
