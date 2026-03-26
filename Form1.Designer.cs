@@ -278,6 +278,7 @@
             btnC.TabIndex = 20;
             btnC.Text = "C";
             btnC.UseVisualStyleBackColor = true;
+            btnC.Click += btnC_Click;
             // 
             // btnCe
             // 

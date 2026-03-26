@@ -5,7 +5,6 @@ namespace SimpleCalculator
         int resultNum = 0;
         string firstNum = "";
         string operation = "";
-        bool afterOper = false;
         public Form1()
         {
             InitializeComponent();
@@ -16,13 +15,13 @@ namespace SimpleCalculator
             Button btn = (Button)sender;
             string num = btn.Text;
 
-            
+
             firstNum += num;
             oper.Text += num;
             result.Text += num;
 
         }
-                
+
         private void operBtn_Click(object sender, EventArgs e)
         {
             Button btn = (Button)sender;
@@ -54,8 +53,8 @@ namespace SimpleCalculator
             }
 
             operation = operText;
-            firstNum = "";                 
-                        
+            firstNum = "";
+
 
         }
 
@@ -90,6 +89,15 @@ namespace SimpleCalculator
             oper.Text += resultNum.ToString();
             result.Text = resultNum.ToString();
 
+        }
+
+        private void btnC_Click(object sender, EventArgs e)
+        {
+            resultNum = 0;
+            firstNum = "";
+            operation = "";
+            oper.Text = "";
+            result.Text = "";
         }
     }
 }
